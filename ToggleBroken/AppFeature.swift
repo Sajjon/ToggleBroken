@@ -90,7 +90,7 @@ let appReducer = Reducer<AppState, AppAction, AppEnvironment> { state, action, _
 		state.isLoveStreetFighterChecked.toggle()
 		return .none
 	}
-}
+}.debug()
 
 struct AppView: View {
 	let store = Store(
@@ -163,7 +163,7 @@ struct AppView: View {
 						}
 						
 						VStack(alignment: .leading, spacing: 0) {
-							Text(isForcingFullScreen ? "Cannot toggle off/on, turn off 'Wrap in Fullscreen'" : "Can toggle, turn on 'Wrap in Fullscreen' to see bug.")
+							Text(isForcingFullScreen ? "UI doesn't update, turn off 'Wrap in Fullscreen'" : "Can toggle, turn on 'Wrap in Fullscreen' to see bug.")
 								.foregroundColor(isForcingFullScreen ? Color.orange : Color.blue)
 								.font(.footnote)
 							
@@ -181,7 +181,7 @@ struct AppView: View {
 						thinSeparator
 						Text("TCA").font(.title)
 						Text("Toggles with `isOn: viewStore.binding(get:set)`").font(.caption)
-						Text("'Loves StarFox' toggle works, but 'Loves Street Fighter' does not, it uses `toggleStyle` and when wrapped in `ForceFullScreen` with content from function. If content is computed in init of ForceFullScreen, it works!").font(.caption)
+						Text("'Loves StarFox' toggle works, but 'Loves Street Fighter' does not update UI (but state), it uses `toggleStyle` and when wrapped in `ForceFullScreen` with content from function. If content is computed in init of ForceFullScreen, it works!").font(.caption)
 						thinSeparator
 					}
 				}
