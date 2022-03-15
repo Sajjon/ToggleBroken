@@ -8,15 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		481E733C27E07B3700354E30 /* ToggleBrokenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481E733B27E07B3700354E30 /* ToggleBrokenApp.swift */; };
-		481E733E27E07B3700354E30 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481E733D27E07B3700354E30 /* ContentView.swift */; };
+		481E733E27E07B3700354E30 /* AppFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481E733D27E07B3700354E30 /* AppFeature.swift */; };
 		481E734027E07B3900354E30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 481E733F27E07B3900354E30 /* Assets.xcassets */; };
 		481E734327E07B3900354E30 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 481E734227E07B3900354E30 /* Preview Assets.xcassets */; };
+		481E734B27E07B7A00354E30 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 481E734A27E07B7A00354E30 /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		481E733827E07B3700354E30 /* ToggleBroken.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToggleBroken.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		481E733B27E07B3700354E30 /* ToggleBrokenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleBrokenApp.swift; sourceTree = "<group>"; };
-		481E733D27E07B3700354E30 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		481E733D27E07B3700354E30 /* AppFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFeature.swift; sourceTree = "<group>"; };
 		481E733F27E07B3900354E30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		481E734227E07B3900354E30 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -26,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				481E734B27E07B7A00354E30 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,7 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				481E733B27E07B3700354E30 /* ToggleBrokenApp.swift */,
-				481E733D27E07B3700354E30 /* ContentView.swift */,
+				481E733D27E07B3700354E30 /* AppFeature.swift */,
 				481E733F27E07B3900354E30 /* Assets.xcassets */,
 				481E734127E07B3900354E30 /* Preview Content */,
 			);
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = ToggleBroken;
+			packageProductDependencies = (
+				481E734A27E07B7A00354E30 /* ComposableArchitecture */,
+			);
 			productName = ToggleBroken;
 			productReference = 481E733827E07B3700354E30 /* ToggleBroken.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = 481E732F27E07B3700354E30;
+			packageReferences = (
+				481E734927E07B7A00354E30 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = 481E733927E07B3700354E30 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				481E733E27E07B3700354E30 /* ContentView.swift in Sources */,
+				481E733E27E07B3700354E30 /* AppFeature.swift in Sources */,
 				481E733C27E07B3700354E30 /* ToggleBrokenApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,6 +345,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		481E734927E07B7A00354E30 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = exactVersion;
+				version = 0.33.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		481E734A27E07B7A00354E30 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 481E734927E07B7A00354E30 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 481E733027E07B3700354E30 /* Project object */;
 }
